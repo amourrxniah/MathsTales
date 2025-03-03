@@ -47,17 +47,6 @@ body {
     z-index: 500;      /* Make sure the image is on top of other content */
 }
 
-.h1{
-    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
-    font-size: 16px;  /* Adjust size if needed */
-    line-height: 1.6;
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-    font-size: 1.2em; /* Scales text */
-}
 
 /* Responsive Design with Media Queries */
 @media (max-width: 1024px) {
@@ -78,7 +67,7 @@ body {
         max-height: 70vh;
     }
 
-    .h1 {
+    .body {
         font-size: 1.1em;
     }
 }
@@ -101,8 +90,26 @@ body {
         max-height: 70vh;
     }
 
-    .h1 {
+    .body {
         font-size: 1.2em;
+    }
+
+    .progress-container {
+        width: 80%;
+        height: 20px;
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 10px;
+        position: relative;
+        margin: 20px auto;
+        overflow: hidden;
+    }
+
+    .progress-bar {
+        height: 100%;
+        width: 10%; /* Adjust this value to change progress */
+        background-color: green;
+        border-radius: 10px;
     }
 }
 
@@ -128,8 +135,7 @@ body {
         max-height: 60vh;
     }
 
-    .h1 {
-        font-size: 1em;
-        padding: 10px;
-    }
+
+
+    
 }
