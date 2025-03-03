@@ -55,6 +55,7 @@ header {
 
 /* each book */
 .book-container {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
