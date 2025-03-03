@@ -1,16 +1,147 @@
 body {
-    
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    max-width: 1200px;
+    padding: 20px;
+}
 
+/* user info */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.user-icon {
+    cursor: pointer;
+    width: 90px;
+    border-radius: 50%;
+    transition: transform 0.15s ease-in-out;
+}
+.user-icon:hover {
+    transform: scale(1.1);
+}
 
-
-
-/* Footer */
-footer {
-    text-align: center;
-    background: #333;
-    color: white;
+.logo {
+    width: 150px;
     padding: 10px;
-    margin-top: 20px;
+    margin-right: -130px;
+    align-self: flex-end;
+    margin-top: -35px;
+}
+
+/* book section */
+.book-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 80px;
+    margin-top: 30px;
+    padding: 0 20px;
+}
+
+/* each book */
+.book-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 290px;
+}
+.book {
+    width: 280px;
+    height: auto;
+    transition: transform 0.15s ease-in-out;
+}
+.book:hover {
+    transform: translateY(-5px);
+    /* transform: scale(1.05); */
+}
+
+/* progress */
+.progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+    gap: 10px;
+}
+.progress-outer {
+    width: 200px;
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #000;
+}
+.progress-inner {
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 20px;
+}
+
+/* award icon */
+.award-icon {
+    height: 40px;
+    margin-right: -10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* bottom menu */
+.bottom-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ddd;
+    padding: 15px 30px;
+    width: 280px;
+    border-radius: 50px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    border: 3px solid #000
+}
+
+.menu-item {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    margin: 0 5px;
+}
+.menu-item img {
+    width: 45px;
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+}
+.menu-item img:hover {
+    transform: scale(1.2);
+}
+.menu-item:active {
+    background: rgba(0, 0, 0, 0.2);
 }
