@@ -22,8 +22,8 @@ body {
     height: auto;    /* Maintain aspect ratio */
     cursor: pointer; /* Makes it clickable */
     position: absolute;  /* Positioned relative to the page, not fixed */
-    top: 5%;        /* Distance from top of the page */
-    left: 5%;       /* Distance from the left of the page */
+    top: 3%;        /* Distance from top of the page */
+    left: 3%;       /* Distance from the left of the page */
     z-index: 1000;    /* Ensures it's on top of other content */
 }
 
@@ -46,6 +46,39 @@ body {
     max-height: 80vh; /* Limits height to 80% of viewport height */
     z-index: 500;      /* Make sure the image is on top of other content */
 }
+
+h1 {
+        position: absolute;
+        bottom: 10%;  /* Adjust as needed */
+        left: 55%;
+        transform: translateX(-50%); /* Centers it horizontally */
+        width: 90%; /* Ensures text does not overflow */
+        text-align: center;
+    }
+    
+
+
+
+.progress-container {
+    width: 60%;
+    height: 35px;
+    background-color: white;
+    border: 3.5px solid black;
+    border-radius: 20px;
+    position: absolute;
+    margin: 20px auto;
+    overflow: hidden;
+    top: 80px;
+    left: 20%;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 10%; /* Adjust this value to change progress */
+    background-color: green;
+    border-radius: 10px;
+}
+
 
 
 /* Responsive Design with Media Queries */
@@ -94,23 +127,8 @@ body {
         font-size: 1.2em;
     }
 
-    .progress-container {
-        width: 80%;
-        height: 20px;
-        background-color: white;
-        border: 2px solid black;
-        border-radius: 10px;
-        position: relative;
-        margin: 20px auto;
-        overflow: hidden;
-    }
 
-    .progress-bar {
-        height: 100%;
-        width: 10%; /* Adjust this value to change progress */
-        background-color: green;
-        border-radius: 10px;
-    }
+    
 }
 
 @media (max-width: 480px) {
