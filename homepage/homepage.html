@@ -55,13 +55,31 @@
         <button class="menu-item">
             <img src="assets/Home.svg" alt="Home">
         </button>
-        <button class="menu-item">
+        <button class="menu-item" id="leaderboard-btn">
             <img src="assets/trophy.svg" alt="LeaderBoard">
         </button>
-        <button class="menu-item">
+        <button class="menu-item" id="settings-btn">
             <img src="assets/Settings.svg" alt="Settings">
         </button>
-        
      </nav>
-</body>
+
+    <!-- popup overlay -->
+     <div id="popup-overlay" class="popup-overlay">
+        <div class="popup-box">
+            <span class="popup-title">LeaderBoard</span>
+            <img src="assets/exitbutton.svg" alt="Close" class="close-btn" id="close-popup">
+
+            <!-- leaderboard slots -->
+             <div class="leaderboard-slot"></div>
+             <div class="leaderboard-slot"></div>
+             <div class="leaderboard-slot"></div>
+             <div class="leaderboard-slot"></div>
+             <div class="leaderboard-slot"></div>
+        </div>
+    </div>
+
+    <!-- link js -->
+     <script src="script.js"></script>
+
+    </body>
 </html>
