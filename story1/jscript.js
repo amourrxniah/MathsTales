@@ -9,12 +9,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Toggle the settings panel and rotate the button when clicked
     settingsButton.addEventListener('click', function () {
-        // Toggle the panel visibility
         settingsPanel.classList.toggle('hidden');
-
-        // Toggle the rotate class on the button
         settingsButton.classList.toggle('rotate');
     });
+
+    // Start typewriter effect
+    typeWriterEffect("Once upon a time, there lived a little old man and a little old woman.", document.querySelector("h1"));
 });
 
 function initSlider(type, initialValue) {
@@ -86,7 +86,22 @@ function initSlider(type, initialValue) {
 
         // Update the fill width and handle position
         fill.style.width = `${value}%`;
-        icon.style.left = `calc(${value}% - 10px)`; // Adjust for the circle's size
+        icon.style.left = `calc(${value}% - 10px)`;
         percentage.textContent = `${value}%`;
     }
+}
+
+// Typewriter effect
+function typeWriterEffect(text, element, speed = 50) {
+    element.textContent = ""; // Clear existing text
+    let index = 0;
+
+    const interval = setInterval(() => {
+        if (index < text.length) {
+            element.textContent += text[index]; // Add one letter at a time
+            index++;
+        } else {
+            clearInterval(interval); // Stop when all letters are shown
+        }
+    }, speed);
 }
