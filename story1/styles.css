@@ -38,14 +38,21 @@ body {
 }
 
 .settings-btn {
-    width: 10vw;     /* Width adjusts based on the viewport width */
+    width: 30vw;     /* Width adjusts based on the viewport width */
     height: auto;    /* Maintain aspect ratio */
     cursor: pointer; /* Makes it clickable */
     position: absolute;  /* Positioned relative to the page, not fixed */
-    bottom: 5%;        /* Distance from the bottom of the page */
-    left: 5%;       /* Distance from the left of the page */
+    bottom: 0%;        /* Distance from the bottom of the page */
+    right: -10%;       /* Distance from the left of the page */
     z-index: 1000;    /* Ensures it's on top of other content */
+    transition: transform 0.3s ease; /* Smooth rotation */
 }
+
+/* Class to rotate the button */
+.settings-btn.rotate {
+    transform: rotate(30deg); /* Rotate slightly (adjust the angle as needed) */
+}
+
 
 
 .couple-image {
@@ -55,7 +62,7 @@ body {
     transform: translate(-50%, -50%);  /* Centers the image */
     max-width: 90%;   /* Ensures image never exceeds 90% of screen width */
     max-height: 80vh; /* Limits height to 80% of viewport height */
-    z-index: 500;      /* Make sure the image is on top of other content */
+          /* Make sure the image is on top of other content */
 }
 
 h1 {
@@ -67,6 +74,145 @@ h1 {
         text-align: center;
     }
     
+    .settings-container {
+        position: absolute;
+        width: 320px;
+        left: 73%;
+        top: 35%;
+    }
+
+    .settings-container.hidden {
+        display: none;
+    }
+    
+
+    .settings-panel {
+        background-color: #e0e0e0;
+        border: 4px solid #000;
+        border-radius: 25px;
+        padding: 20px;
+        position: relative;
+    }
+
+    .settings-header {
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #e0e0e0;
+        border: 3px solid #000;
+        border-radius: 25px;
+        padding: 5px 30px;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .audio-title {
+        text-align: center;
+        font-size: 28px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #000;
+        padding-bottom: 10px;
+    }
+
+    .control-group {
+        margin-bottom: 30px;
+    }
+
+    .control-label {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .slider-container {
+        display: flex;
+        align-items: center;
+        position: relative;
+        height: 50px;
+    }
+
+    .percentage {
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .slider-icon {
+        width: 50px;
+        height: 50px;
+        background-color: #888;
+        border: 3px solid #000;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: grab;
+        z-index: 2;
+        transition: background-color 0.2s;
+    }
+
+    .slider-icon:hover {
+        background-color: #777;
+    }
+
+    .slider-icon:active {
+        cursor: grabbing;
+        background-color: #666;
+    }
+
+    .slider-track {
+        height: 20px;
+        background-color: #fff;
+        border: 3px solid #000;
+        border-radius: 10px;
+        width: 100%;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .slider-fill {
+        position: absolute;
+        height: 100%;
+        background-color: #888;
+        border-radius: 7px 0 0 7px;
+        left: 0;
+        transition: width 0.1s;
+    }
+
+    .bubble {
+        position: absolute;
+        border: 3px solid #000;
+        border-radius: 50%;
+        background-color: #fff;
+    }
+
+    .bubble-1 {
+        width: 30px;
+        height: 30px;
+        right: 20px;
+        bottom: -40px;
+    }
+
+    .bubble-2 {
+        width: 20px;
+        height: 20px;
+        right: 5px;
+        bottom: -60px;
+    }
+
+
+    .hidden {
+        display: none;
+    }
+    
+  
 
 
 
