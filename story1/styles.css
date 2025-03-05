@@ -37,6 +37,17 @@ body {
     z-index: 1000;    /* Ensures it's on top of other content */
 }
 
+.settings-btn {
+    width: 10vw;     /* Width adjusts based on the viewport width */
+    height: auto;    /* Maintain aspect ratio */
+    cursor: pointer; /* Makes it clickable */
+    position: absolute;  /* Positioned relative to the page, not fixed */
+    bottom: 5%;        /* Distance from the bottom of the page */
+    left: 5%;       /* Distance from the left of the page */
+    z-index: 1000;    /* Ensures it's on top of other content */
+}
+
+
 .couple-image {
     position: absolute;
     top: 50%;         /* Centers image vertically */
