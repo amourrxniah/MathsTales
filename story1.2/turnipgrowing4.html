@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="styles.css">
+    <script src="jscript.js"></script>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Maths Tales</title>
+    </head>
+
+    <body>
+        <!-- Buttons -->
+        <img src="exitbutton.svg" alt="Exit Button" class="exit-btn">
+        <img src="soundbutton.svg" alt="Sound Button" class="sound-btn">
+        <img src="settings.svg" alt="Settings Button" class="settings-btn" id="settings-btn">
+        
+        <a href="turnipgrowing5.html">
+            <img src="arrow.svg" alt="Next" id="arrows-btn">    
+        </a>
+
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
+
+        <!-- Images -->
+        <img src="page4.svg" alt="Turnip growing4" class="images">
+        
+        <!-- Story Text -->
+        <h1>until it was enormous!</h1>
+
+        <!-- Settings Menu -->
+        <div class="settings-container hidden" id="settings-panel">
+            <div class="settings-panel">
+                <div class="settings-header">Settings</div>
+                <div class="audio-title">Audio</div>
+        
+                <!-- Sound Effects Slider -->
+                <div class="control-group">
+                    <div class="control-label">Sound effects</div>
+                    <div class="percentage" id="sound-percentage">0%</div>
+                    <div class="slider-container">
+                        <div class="slider-track" id="sound-track">
+                            <div class="slider-fill" id="sound-fill"></div>
+                        </div>
+                        <div class="slider-icon" id="sound-icon"></div>
+                    </div>
+                </div>
+                
+                <!-- Music Slider -->
+                <div class="control-group">
+                    <div class="control-label">Music</div>
+                    <div class="percentage" id="music-percentage">0%</div>
+                    <div class="slider-container">
+                        <div class="slider-track" id="music-track">
+                            <div class="slider-fill" id="music-fill"></div>
+                        </div>
+                        <div class="slider-icon" id="music-icon"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </body>
+
+</html>
+
