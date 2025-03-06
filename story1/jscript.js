@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
         settingsButton.classList.toggle('rotate');
     });
 
-    // Start typewriter effect
+    // Start typewriter effect for the initial story
     typeWriterEffect("Once upon a time, there lived a little old man and a little old woman.", document.querySelector("h1"));
 });
 
@@ -102,6 +102,26 @@ function typeWriterEffect(text, element, speed = 50) {
             index++;
         } else {
             clearInterval(interval); // Stop when all letters are shown
+
+            // Show the arrow button after a 1-second delay
+            setTimeout(() => {
+                const arrowBtn = document.getElementById('arrows-btn');
+                arrowBtn.style.display = 'block'; // Make the arrow button visible
+            }, 1000); // 1-second delay
         }
     }, speed);
 }
+
+// Add event listener to the arrow button
+const arrowBtn = document.getElementById('arrows-btn');
+arrowBtn.addEventListener('click', function () {
+    // Change the image to turnipSeeds.svg
+    const coupleImage = document.querySelector('.couple-image');
+    coupleImage.src = 'assets/turnipSeeds.svg'; // Update the image source
+
+    // Start the new typewriter effect
+    typeWriterEffect("One day, the little old man planted some turnip seeds.", document.querySelector("h1"));
+
+    // Hide the arrow button again (optional)
+    arrowBtn.style.display = 'none';
+});
