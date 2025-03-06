@@ -5,28 +5,134 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maths Tales</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- header section with user info and logo -->
     <header>
+        <div class="user-info">
+            <img src="assets/user icon.svg" alt="User Icon" class="user-icon">
+            <h1>Hi, Jane!</h1>
+        </div>
         <img src="../logo.svg" alt="Maths Tales logo" class="logo">
-        <h1>Hi, Jane!</h1>
-        <img src="assets/user icon.svg" alt="User Icon" class="user-icon">
     </header>
 
     <main>
-        <section class="book-covers">
-            <img src="assets/book cover.svg" alt="Enormous Turnip" class="book">
-            <img src="assets/goldilocks.svg" alt="Goldilocks and the Three Bears" class="book">
-            <img src="assets/beanstalk.svg" alt="Jack and the Beanstalk" class="book">
-        </section>
+        <!-- section containing books -->
+        <section class="book-section">
+            <!-- book 1: enormous turnip -->
+            <div class="book-container">
+                <a href="#">
+                    <img src="assets/book cover.svg" alt="Enormous Turnip" class="book">
+                </a>
+                <!-- progress bar for book -->
+                <div class="progress-container">
+                    <div class="progress-outer">
+                        <div class="progress-inner" style="width: 20%;"></div>
+                    </div>
+                </div>
+            </div>
 
+            <!-- book 2: goldilocks and the 3 bears -->
+            <div class="book-container">
+                <img src="assets/goldilocks.svg" alt="Goldilocks and the Three Bears" class="book">
+                <div class="progress-container">
+                    <div class="progress-outer">
+                        <div class="progress-inner" style="width: 100%;"></div>
+                    </div>
+                    <!-- award for completion -->
+                    <img src="assets/award.svg" alt="Award" class="award-icon">
+                </div>
+            </div>
+
+            <!-- book 3: jack and the beanstalk -->
+            <div class="book-container">
+                <img src="assets/beanstalk.svg" alt="Jack and the Beanstalk" class="book">
+                <div class="progress-container">
+                    <div class="progress-outer">
+                        <div class="progress-inner" style="width: 100%;"></div>
+                    </div>
+                    <!-- award for completion -->
+                        <img src="assets/Award.svg" alt="Award" class="award-icon">
+                </div>
+            </div>
+    </section>
     </main>
 
-    <footer>
-        <p>© 2025 Maths Tales. All rights reserved.</p>
-    </footer>
+    <!-- bottom nav menu -->
+     <nav class="bottom-menu">
+        <!-- home button -->
+        <button class="menu-item">
+            <img src="assets/Home.svg" alt="Home">
+        </button>
+        <!-- leaderboard button -->
+        <button class="menu-item" id="leaderboard-btn">
+            <img src="assets/trophy.svg" alt="LeaderBoard">
+        </button>
+        <!-- settings button -->
+        <button class="menu-item" id="settings-btn">
+            <img src="assets/Settings.svg" alt="Settings">
+        </button>
+     </nav>
 
-</body>
+    <!-- leaderboard popup overlay -->
+     <div id="popup-overlay" class="popup-overlay">
+        <div class="popup-box">
+            <span class="popup-title">LeaderBoard</span>
+
+            <!-- close button -->
+            <img src="assets/exitbutton.svg" alt="Close" class="close-btn" id="close-popup">
+
+            <!-- leaderboard slots -->
+             <div class="leaderboard-slot"></div>
+             <div class="leaderboard-slot"></div>
+             <div class="leaderboard-slot"></div>
+             <div class="leaderboard-slot"></div>
+             <div class="leaderboard-slot"></div>
+        </div>
+    </div>
+
+    <!-- settings popup -->
+     <div id="settings-overlay" class="popup-overlay">
+        <div class="popup-box settings-box">
+            <span class="popup-title">Settings</span>
+
+            <!-- close button -->
+            <img src="assets/exitbutton.svg" alt="Close" class="close-btn" id="close-settings">
+
+            <!-- top section (music, sound, vibrate) -->
+            <div class="settings-top">
+                <div class="setting-item">
+                    <img src="assets/music.svg" alt="Music" class="settings-icon-top" id="music-icon">
+             </div>
+            <div class="setting-item">
+                    <img src="assets/sound.svg" alt="Sound" class="settings-icon-top" id="sound-icon">
+             </div>
+            <div class="setting-item">
+                    <img src="assets/vibrate.svg" alt="Vibrate" class="settings-icon-top" id="vibrate-icon">
+             </div>
+        </div>
+
+        <!-- bottom section (how to play, audio, accessibility) -->
+         <div class="settings-bottom">
+            <div class="setting-item">
+                <img src="assets/howtoplay.svg" alt="How To Play" class="settings-icon-bottom">
+                <span class="setting-label">How To Play</span>
+            </div>
+            <div class="setting-item">
+                <img src="assets/sound2.svg" alt="Sound" class="settings-icon-bottom">
+                <span class="setting-label">Audio Settings</span>
+            </div>
+            <div class="setting-item">
+                <img src="assets/accessibility.svg" alt="Accessibility" class="settings-icon-bottom">
+                <span class="setting-label">Accessibility</span>
+            </div>
+         </div>
+     </div>
+
+    <!-- link js -->
+     <script src="script.js"></script>
+
+    </body>
 </html>
-<!-- hello -->
