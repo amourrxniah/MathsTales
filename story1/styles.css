@@ -1,64 +1,228 @@
-/* Reset some default styles */
+/* Reset Default Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Basic Styles */
+/* Global Styles */
 body {
-    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
-    font-size: 16px;  /* Adjust size if needed */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
     line-height: 1.6;
     color: black;
     text-align: center;
     padding: 20px;
-    margin-top: 0;  /* Removed margin-top to make it more consistent */
 }
 
-/* Exit Button Styling */
+/* Exit & Control Buttons */
+.exit-btn,
+.sound-btn,
+.settings-btn
+ {
+    width: 20vw;
+    height: auto;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1000;
+}
+
 .exit-btn {
-    width: 20vw;     /* Width adjusts based on the viewport width */
-    height: auto;    /* Maintain aspect ratio */
-    cursor: pointer; /* Makes it clickable */
-    position: absolute;  /* Positioned relative to the page, not fixed */
-    top: 3%;        /* Distance from top of the page */
-    left: 3%;       /* Distance from the left of the page */
-    z-index: 1000;    /* Ensures it's on top of other content */
+    top: 3%;
+    left: 3%;
 }
 
 .sound-btn {
-    width: 25vw;     /* Width adjusts based on the viewport width */
-    height: auto;    /* Maintain aspect ratio */
-    cursor: pointer; /* Makes it clickable */
-    position: absolute;  /* Positioned relative to the page, not fixed */
-    bottom: 5%;        /* Distance from the bottom of the page */
-    left: 5%;       /* Distance from the left of the page */
-    z-index: 1000;    /* Ensures it's on top of other content */
+    bottom: 5%;
+    left: 5%;
+    width: 25vw;
 }
 
-.couple-image {
+.settings-btn {
+    bottom: 0;
+    right: -10%;
+    width: 30vw;
+    transition: transform 0.3s ease;
+}
+
+/* Arrow Button */
+#arrows-btn {
+    bottom: 45%;
+    left: 85%;
+    width: 10vw;
+    height: auto;
+    cursor: pointer;
     position: absolute;
-    top: 50%;         /* Centers image vertically */
-    left: 50%;        /* Centers image horizontally */
-    transform: translate(-50%, -50%);  /* Centers the image */
-    max-width: 90%;   /* Ensures image never exceeds 90% of screen width */
-    max-height: 80vh; /* Limits height to 80% of viewport height */
-    z-index: 500;      /* Make sure the image is on top of other content */
+    animation: pulse 1.5s infinite; /* Apply the pulse animation */
 }
 
-h1 {
-        position: absolute;
-        bottom: 10%;  /* Adjust as needed */
-        left: 55%;
-        transform: translateX(-50%); /* Centers it horizontally */
-        width: 90%; /* Ensures text does not overflow */
-        text-align: center;
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1); /* Normal size */
     }
+    50% {
+        transform: scale(1.1); /* Slightly larger */
+    }
+    100% {
+        transform: scale(1); /* Back to normal size */
+    }
+}
     
+/* Rotating Effect */
+.settings-btn.rotate {
+    transform: rotate(30deg);
+}
 
+/* Title */
+h1 {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    transform: none;
+    width: 90%;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    left: 21%;
+}
 
+/* Settings Panel */
+.settings-container {
+    position: absolute;
+    width: 320px;
+    left: 73%;
+    top: 35%;
+}
 
+.settings-container.hidden {
+    display: none;
+}
+
+.settings-panel {
+    background-color: #e0e0e0;
+    border: 4px solid #000;
+    border-radius: 25px;
+    padding: 20px;
+    position: relative;
+}
+
+.settings-header {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #e0e0e0;
+    border: 3px solid #000;
+    border-radius: 25px;
+    padding: 5px 30px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Audio Controls */
+.audio-title {
+    text-align: center;
+    font-size: 28px;
+    margin: 15px 0 20px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 10px;
+}
+
+.control-group {
+    margin-bottom: 30px;
+}
+
+.control-label {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 50px;
+}
+
+.percentage {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* Slider */
+.slider-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #888;
+    border: 3px solid #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: grab;
+    z-index: 2;
+    transition: background-color 0.2s;
+}
+
+.slider-icon:hover {
+    background-color: #777;
+}
+
+.slider-icon:active {
+    cursor: grabbing;
+    background-color: #666;
+}
+
+.slider-track {
+    height: 20px;
+    background-color: #fff;
+    border: 3px solid #000;
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+}
+
+.slider-fill {
+    position: absolute;
+    height: 100%;
+    background-color: #888;
+    border-radius: 7px 0 0 7px;
+    left: 0;
+    transition: width 0.1s;
+}
+
+/* Decorative Bubbles */
+.bubble {
+    position: absolute;
+    border: 3px solid #000;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.bubble-1 {
+    width: 30px;
+    height: 30px;
+    right: 20px;
+    bottom: -40px;
+}
+
+.bubble-2 {
+    width: 20px;
+    height: 20px;
+    right: 5px;
+    bottom: -60px;
+}
+
+/* Progress Bar */
 .progress-container {
     width: 60%;
     height: 35px;
@@ -74,25 +238,32 @@ h1 {
 
 .progress-bar {
     height: 100%;
-    width: 10%; /* Adjust this value to change progress */
+    width: 10%;
     background-color: green;
     border-radius: 10px;
 }
 
+/* Couple Image */
+.couple-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100vh;
+    max-height: 90vh;
+}
 
 
-/* Responsive Design with Media Queries */
+
+
+/* Responsive Design */
 @media (max-width: 1024px) {
     .exit-btn {
         width: 15vw;
-        top: 3%;
-        left: 3%;
     }
 
     .sound-btn {
         width: 20vw;
-        bottom: 3%;
-        left: 3%;
     }
 
     .couple-image {
@@ -100,8 +271,12 @@ h1 {
         max-height: 70vh;
     }
 
-    .body {
+    body {
         font-size: 1.1em;
+    }
+
+    #next-arrow {
+        left: 65%; /* Adjust for smaller screens */
     }
 }
 
@@ -123,12 +298,13 @@ h1 {
         max-height: 70vh;
     }
 
-    .body {
+    body {
         font-size: 1.2em;
     }
 
-
-    
+    #next-arrow {
+        left: 60%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -153,7 +329,7 @@ h1 {
         max-height: 60vh;
     }
 
-
-
-    
+    #next-arrow {
+        left: 55%;
+    }
 }
