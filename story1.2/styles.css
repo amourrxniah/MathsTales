@@ -54,8 +54,6 @@ body {
     cursor: pointer;
     position: absolute;
     animation: pulse 1.5s infinite; /* Apply the pulse animation */
-    display: none;
-
 }
 
 /* Pulse Animation */
@@ -155,7 +153,7 @@ h1 {
     margin-bottom: 5px;
 }
 
-/* Slider Icon */
+/* Slider */
 .slider-icon {
     width: 50px;
     height: 50px;
@@ -181,12 +179,6 @@ h1 {
 .slider-icon:active {
     cursor: grabbing;
     background-color: #666;
-}
-
-/* Icon inside the slider */
-.slider-icon .icon {
-    width: 24px; /* Adjust size as needed */
-    height: 24px; /* Adjust size as needed */
 }
 
 .slider-track {
@@ -246,13 +238,13 @@ h1 {
 
 .progress-bar {
     height: 100%;
-    width: 1%;
+    width: 10%;
     background-color: green;
     border-radius: 10px;
 }
 
 /* Couple Image */
-.couple-image {
+.images {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -260,19 +252,6 @@ h1 {
     max-width: 100vh;
     max-height: 90vh;
 }
-
-/* .turnip-seeds{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 100vh;
-    max-height: 90vh;
-
-} */
-
-
-
 
 /* Responsive Design */
 @media (max-width: 1024px) {
