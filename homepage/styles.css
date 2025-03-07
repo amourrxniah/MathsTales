@@ -1,290 +1,548 @@
 /* general style */
 body {
-    font-family: 'Montserrat', sans-serif; /* sets font family */
-    text-align: center; /* centers text */
-    margin: 0; /* removes default margin */
-    padding: 0; /* removes default padding */
-    background-color: #fff; /* sets background to white */
-    display: flex; /* use flexbox for layout */
-    flex-direction: column; /* stack element vertically */
-    min-height: 100vh; /* full viewport height */
+    font-family: 'Montserrat', sans-serif;
+    /* sets font family */
+    text-align: center;
+    /* centers text */
+    margin: 0;
+    /* removes default margin */
+    padding: 0;
+    /* removes default padding */
+    background-color: #fff;
+    /* sets background to white */
+    display: flex;
+    /* use flexbox for layout */
+    flex-direction: column;
+    /* stack element vertically */
+    min-height: 100vh;
+    /* full viewport height */
 }
 
 /* header section */
 header {
-    display: flex; /* flexbox */
-    justify-content: space-between; /* make items even */
-    align-items: center; /* align items in center */
-    width: 100vw; /* set width */
-    max-width: 88vw; /* restrict min width */
-    padding: 2vw; /* add padding around header */
-    margin: 0 auto; /* center header */
-    flex-wrap: wrap; /* prevent items from shrinking*/
+    display: flex;
+    /* flexbox */
+    justify-content: space-between;
+    /* make items even */
+    align-items: center;
+    /* align items in center */
+    width: 100vw;
+    /* set width */
+    max-width: 88vw;
+    /* restrict min width */
+    padding: 2vw;
+    /* add padding around header */
+    margin: 0 auto;
+    /* center header */
+    flex-wrap: wrap;
+    /* prevent items from shrinking*/
 }
 
 /* user info */
 .user-info {
-    display: flex; /* flexbox */
-    align-items: center; /* align items in center */
-    gap: 1vw; /* add space between elements */
+    display: flex;
+    /* flexbox */
+    align-items: center;
+    /* align items in center */
+    gap: 1vw;
+    /* add space between elements */
     margin-left: -5vw;
     margin-top: -2vw;
 }
 
 .user-icon {
-    cursor: pointer; /* cursor to pointer */
-    width: 6vw; /* set icon width */
-    border-radius: 50%; /* make icon circular */
-    transition: transform 0.15s ease-in-out; /* smooth scaling effects */
+    cursor: pointer;
+    /* cursor to pointer */
+    width: 6vw;
+    /* set icon width */
+    border-radius: 50%;
+    /* make icon circular */
+    transition: transform 0.15s ease-in-out;
+    /* smooth scaling effects */
 }
 
 .user-icon:hover {
-    transform: scale(1.1); /* enlarge icon on hover */
+    transform: scale(1.1);
+    /* enlarge icon on hover */
 }
 
 /* logo */
 .logo {
-    width: 12vw; /* set logo width */
-    padding: 0.5vw; /* add padding */
-    margin-right: -6vw; /* adjust logo position */
+    width: 12vw;
+    /* set logo width */
+    padding: 0.5vw;
+    /* add padding */
+    margin-right: -6vw;
+    /* adjust logo position */
     flex-shrink: 0;
     /*align-self: flex-end; /* aligns logo to bottom */
-    margin-top: -5vh; /* moves logo upwards */
+    margin-top: -5vh;
+    /* moves logo upwards */
 }
 
 /* book section */
 .book-section {
-    display: flex; /* flexbox */
-    flex-wrap: wrap; /* wraps items */
-    justify-content: center; /* centers books */
-    align-items: flex-start; /* aligns items to top */
-    gap: 9vw; /* add space between elements */
-    margin-top: 2vh; /* add margin above */
-    padding: 0 5vw; /* add padding on sides */
+    display: flex;
+    /* flexbox */
+    flex-wrap: wrap;
+    /* wraps items */
+    justify-content: center;
+    /* centers books */
+    align-items: flex-start;
+    /* aligns items to top */
+    gap: 9vw;
+    /* add space between elements */
+    margin-top: 2vh;
+    /* add margin above */
+    padding: 0 5vw;
+    /* add padding on sides */
 }
 
 /* each book */
 .book-container {
-    cursor: pointer; /* makes books clickable */
-    display: flex; /* flexbox */
-    flex-direction: column; /* stack elements vertically */
-    align-items: center; /* center elements */
-    width: 100%; /* sets container width */
+    cursor: pointer;
+    /* makes books clickable */
+    display: flex;
+    /* flexbox */
+    flex-direction: column;
+    /* stack elements vertically */
+    align-items: center;
+    /* center elements */
+    width: 100%;
+    /* sets container width */
     max-width: 20vw;
 }
 
 .book {
-    width: 100%; /* sets book width */
-    height: auto; /* maintains ratio */
-    transition: transform 0.15s ease-in-out; /* hover effect */
+    width: 100%;
+    /* sets book width */
+    height: auto;
+    /* maintains ratio */
+    transition: transform 0.15s ease-in-out;
+    /* hover effect */
 }
 
 .book:hover {
-    transform: translateY(-0.5vh); /* moves book upwards on hover */
+    transform: translateY(-0.5vh);
+    /* moves book upwards on hover */
 }
 
 /* progress */
 .progress-container {
-    display: flex; /* flexbox */
-    align-items: center; /* align elements in center */
-    justify-content: center; /* centers progress bar */
-    width: 100%; /* sets full width */
-    margin-top:1vh; /* add spacing above */
-    gap: 1vw; /* add space between elements */
+    display: flex;
+    /* flexbox */
+    align-items: center;
+    /* align elements in center */
+    justify-content: center;
+    /* centers progress bar */
+    width: 100%;
+    /* sets full width */
+    margin-top: 1vh;
+    /* add spacing above */
+    gap: 1vw;
+    /* add space between elements */
 }
 
 .progress-outer {
-    width: 15vw; /* sets progress bar width */
-    height: 3.5vh; /* sets height */
-    background-color: #ddd; /* sets background colour */
-    border-radius: 2vw; /* rounds corners */
-    position: relative; /* allows absolute positioning inside */
-    overflow: hidden; /* hides overflowing content */
-    border: 0.2vw solid #000; /* adds border */
+    width: 15vw;
+    /* sets progress bar width */
+    height: 3.5vh;
+    /* sets height */
+    background-color: #ddd;
+    /* sets background colour */
+    border-radius: 2vw;
+    /* rounds corners */
+    position: relative;
+    /* allows absolute positioning inside */
+    overflow: hidden;
+    /* hides overflowing content */
+    border: 0.2vw solid #000;
+    /* adds border */
 }
 
 .progress-inner {
-    height: 100%; /* fills container height */
-    background-color: #4caf50; /* sets progress colour */
-    border-radius: 2vw; /* rounds corners */
+    height: 100%;
+    /* fills container height */
+    background-color: #4caf50;
+    /* sets progress colour */
+    border-radius: 2vw;
+    /* rounds corners */
 }
 
 /* award icon */
 .award-icon {
-    height: 5vh; /* sets icon height */
-    margin-right: -3vw; /* adjust position */
-    display: flex; /* flexbox */
-    align-items: center; /* centers content */
-    justify-content: center; /* centers content */
+    height: 5vh;
+    /* sets icon height */
+    margin-right: -3vw;
+    /* adjust position */
+    display: flex;
+    /* flexbox */
+    align-items: center;
+    /* centers content */
+    justify-content: center;
+    /* centers content */
 }
 
 /* bottom nav bar */
 .bottom-menu {
-    display: flex; /* flexbox */
-    justify-content: center; /* centers elements */
-    align-items: center; /* aligns items in center */
-    position: fixed; /* fixed position at bottom */
-    bottom: 2vh; /* place above bottom */
-    left: 50%; /* center horizontally */
-    transform: translateX(-50%); /* adjust centering */
-    background-color: #ddd; /* sets background colour */
-    padding: 1vh 3vw; /* adds padding */
-    width: 20vw; /* sets width */
-    border-radius: 5vw; /* round corners */
-    box-shadow: 0 -0.5vh 1vh rgba(0, 0, 0, 0.1); /* adds shadow */
-    border: 0.2vw solid #000 /* adds border */
+    display: flex;
+    /* flexbox */
+    justify-content: center;
+    /* centers elements */
+    align-items: center;
+    /* aligns items in center */
+    position: fixed;
+    /* fixed position at bottom */
+    bottom: 2vh;
+    /* place above bottom */
+    left: 50%;
+    /* center horizontally */
+    transform: translateX(-50%);
+    /* adjust centering */
+    background-color: #ddd;
+    /* sets background colour */
+    padding: 1vh 3vw;
+    /* adds padding */
+    width: 20vw;
+    /* sets width */
+    border-radius: 5vw;
+    /* round corners */
+    box-shadow: 0 -0.5vh 1vh rgba(0, 0, 0, 0.1);
+    /* adds shadow */
+    border: 0.2vw solid #000
+        /* adds border */
 }
 
 .menu-item {
-    background: none; /* removes background */
-    border: none; /* removes border */
-    cursor: pointer; /* changes cursor */
-    padding: 1vh; /* adds padding */
-    display: flex; /* flexbox */
-    align-items: center; /* centers items */
-    justify-content: center; /* centers items */
-    width: 5vw; /* set button size */
-    height: 5vw; /* set button size */
-    border-radius: 50%; /* make button circular */
-    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out; /* smooth transitions */
-    margin: 0 1vw; /* add space between buttons */
+    background: none;
+    /* removes background */
+    border: none;
+    /* removes border */
+    cursor: pointer;
+    /* changes cursor */
+    padding: 1vh;
+    /* adds padding */
+    display: flex;
+    /* flexbox */
+    align-items: center;
+    /* centers items */
+    justify-content: center;
+    /* centers items */
+    width: 5vw;
+    /* set button size */
+    height: 5vw;
+    /* set button size */
+    border-radius: 50%;
+    /* make button circular */
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    /* smooth transitions */
+    margin: 0 1vw;
+    /* add space between buttons */
 }
 
 .menu-item img {
-    width: 4vw; /* set icon size */
-    height: auto; /* maintain ratio */
-    transition: transform 0.2s ease-in-out; /* hover effect */
+    width: 4vw;
+    /* set icon size */
+    height: auto;
+    /* maintain ratio */
+    transition: transform 0.2s ease-in-out;
+    /* hover effect */
 }
 
 .menu-item img:hover {
-    transform: scale(1.2); /* enlarge on hover */
+    transform: scale(1.2);
+    /* enlarge on hover */
 }
 
 .menu-item:active {
-    background: rgba(0, 0, 0, 0.2); /* darken background when clicked */
+    background: rgba(0, 0, 0, 0.2);
+    /* darken background when clicked */
 }
 
 /* popup overlays */
 .popup-overlay {
-    display: none; /* hides popup by default */
+    display: none;
+    /* hides popup by default */
 }
 
 .popup-box {
-    position: absolute; /* position absolutely */
-    top: 52%; /* move box to center */
-    left: 50%; /* move box to center */
-    transform: translate(-50%, -50%); /* centers box */
-    width: 22rem; /* sets width */
-    height: 15rem; /* sets height */
-    background: #a9a9a9; /* sets background */
-    border: 0.1875rem solid #000; /* adds border */
-    border-radius: 0.625rem; /* rounds corners */
-    display: flex; /* flexbox */
-    flex-direction: column; /* stacks elements */
-    align-items: center; /* centers elements */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* adds shadow */
-    padding-top: 3.125rem; /* adds padding */
+    position: absolute;
+    /* position absolutely */
+    top: 52%;
+    /* move box to center */
+    left: 50%;
+    /* move box to center */
+    transform: translate(-50%, -50%);
+    /* centers box */
+    width: 25rem;
+    /* sets width */
+    height: 25rem;
+    /* sets height */
+    background: #a9a9a9;
+    /* sets background */
+    border: 0.1875rem solid #000;
+    /* adds border */
+    border-radius: 0.625rem;
+    /* rounds corners */
+    display: flex;
+    /* flexbox */
+    flex-direction: column;
+    /* stacks elements */
+    align-items: center;
+    /* centers elements */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* adds shadow */
+    padding-top: 3.125rem;
+    /* adds padding */
 }
 
 .popup-title {
-    position: absolute; /* positions title */
-    top: -0.9375rem; /* moves above popup */
-    background: #dcdcdc; /* sets background */
-    color: #000; /* sets text colour */
-    font-size: 1.125rem; /* sets font size */
-    font-weight: bold; /* make text bold */
-    padding: 0.5rem 0.9375rem; /* adds padding */
-    border-radius: 1.25rem; /* rounds corners */
-    border: 0.0625rem solid #000; /* adds border */
+    position: absolute;
+    /* positions title */
+    top: -0.9375rem;
+    /* moves above popup */
+    background: #dcdcdc;
+    /* sets background */
+    color: #000;
+    /* sets text colour */
+    font-size: 1.125rem;
+    /* sets font size */
+    font-weight: bold;
+    /* make text bold */
+    padding: 0.5rem 0.9375rem;
+    /* adds padding */
+    border-radius: 1.25rem;
+    /* rounds corners */
+    border: 0.0625rem solid #000;
+    /* adds border */
 }
 
 /* close button */
 .close-btn {
-    position: absolute; /* position button */
-    top: -0.5625rem; /* moves above popup */
-    right: -2.1875rem; /* moves to the right */
-    width: 6.25rem; /* sets width */
-    cursor: pointer; /* makes clickable */
-    transition: transform 0.2s ease-in-out; /* smooth scaling effect */
+    position: absolute;
+    /* position button */
+    top: -0.5625rem;
+    /* moves above popup */
+    right: -2.1875rem;
+    /* moves to the right */
+    width: 6.25rem;
+    /* sets width */
+    cursor: pointer;
+    /* makes clickable */
+    transition: transform 0.2s ease-in-out;
+    /* smooth scaling effect */
 }
 
 .close-btn:hover {
-    transform: scale(1.2); /* enlarges on hover */
+    transform: scale(1.2);
+    /* enlarges on hover */
 }
 
 .popup-overlay.active {
-    display: flex; /* flexbox */
-    opacity: 1; /* fully visible */
+    display: flex;
+    /* flexbox */
+    opacity: 1;
+    /* fully visible */
 }
 
 .leaderboard-slot {
-    width: 90%; /* sets width */
-    height: 2.3125rem; /* sets height */
-    background: #fff; /* sets background */
-    border-radius: 0.625rem; /* rounds corners */
-    margin: 0.3125rem 0; /* add vertical spacing */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* adds shadow */
-    transition: transform 0.2s ease-in-out; /* enlarges on hover */
+    width: 90%;
+    /* sets width */
+    height: 3.3125rem;
+    /* sets height */
+    background: #fff;
+    /* sets background */
+    border-radius: 0.625rem;
+    /* rounds corners */
+    margin: 0.3125rem 0;
+    /* add vertical spacing */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    /* adds shadow */
+    transition: transform 0.2s ease-in-out;
+    /* enlarges on hover */
 }
 
 .leaderboard-slot:hover {
-    transform: scale(1.1); /* enlarges on hover */
+    transform: scale(1.1);
+    /* enlarges on hover */
+}
+
+/* arrow */
+.arrow-btn {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.arrow-btn:hover {
+    transform: scale(1.1);
 }
 
 /* settings */
 .settings-box {
-    width: 24.375rem; /* sets width */
-    height: 18.75rem; /* sets height */
-    display: flex; /* flexbox */
-    flex-direction: column; /* arrange elements in column */
-    align-items: center; /* centers content horizontally */
+    width: 24.375rem;
+    /* sets width */
+    height: 18.75rem;
+    /* sets height */
+    display: flex;
+    /* flexbox */
+    flex-direction: column;
+    /* arrange elements in column */
+    align-items: center;
+    /* centers content horizontally */
 }
 
 .settings-top {
-    display: flex; /* flexbox */
-    justify-content: center; /* center horizontally */
-    gap: 12%; /* add space between elements */
-    width: 100%; /* makes it full width */
-    margin-top: -0.625rem; /* adjust position upwards */
+    display: flex;
+    /* flexbox */
+    justify-content: center;
+    /* center horizontally */
+    gap: 12%;
+    /* add space between elements */
+    width: 100%;
+    /* makes it full width */
+    margin-top: -0.625rem;
+    /* adjust position upwards */
 }
 
 .settings-bottom {
-    display: flex; /* flexbox */
-    flex-direction: column; /* arrange elements in column */
-    align-items: flex-start; /* aligns content to the left */
-    width: 100%; /* full width */
-    padding-left: 13%; /* left padding for better spacing */
-    margin-top: 0.3125rem; /* slight spacing at the top */
+    display: flex;
+    /* flexbox */
+    flex-direction: column;
+    /* arrange elements in column */
+    align-items: flex-start;
+    /* aligns content to the left */
+    width: 100%;
+    /* full width */
+    padding-left: 13%;
+    /* left padding for better spacing */
+    margin-top: 0.3125rem;
+    /* slight spacing at the top */
 }
 
 .setting-item {
-    display: flex; /* flexbox */
-    align-items: center; /* center content vertically */
-    cursor: pointer; /* cursor to pointer */
-    transition: transform 0.15s ease-in-out; /* smooth scaling effect */
-    margin-bottom: 1.125rem; /* add space between items */
+    display: flex;
+    /* flexbox */
+    align-items: center;
+    /* center content vertically */
+    cursor: pointer;
+    /* cursor to pointer */
+    transition: transform 0.15s ease-in-out;
+    /* smooth scaling effect */
+    margin-bottom: 1.125rem;
+    /* add space between items */
 }
 
 .setting-item img:hover {
-    transform: scale(1.1); /* enlarge on hover */
+    transform: scale(1.1);
+    /* enlarge on hover */
 }
 
 .settings-icon-top {
-    width: 4.375rem; /* width */
-    height: 4.375rem; /* height */
+    width: 4.375rem;
+    /* width */
+    height: 4.375rem;
+    /* height */
 }
 
 .settings-icon-bottom {
-    width: 3.4375rem; /* width */
-    height: 3.4375rem; /* height */
-    margin-right: 1.25rem; /* add space between icon and text */
+    width: 3.4375rem;
+    /* width */
+    height: 3.4375rem;
+    /* height */
+    margin-right: 1.25rem;
+    /* add space between icon and text */
 }
 
 .setting-label {
-    font-size: 2.1875rem; /* set text size */
-    font-weight: 500; /* font thickness */
-    color: #000; /* set text colour to black */
-    padding-left: 0.3125rem; /* add space to the left */
+    font-size: 2.1875rem;
+    /* set text size */
+    font-weight: 500;
+    /* font thickness */
+    color: #000;
+    /* set text colour to black */
+    padding-left: 0.3125rem;
+    /* add space to the left */
+}
+
+/* slider */
+.slider-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+/* label above slider */
+.slider-label {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    margin-top: 2rem;
+}
+
+/* group slider with icon */
+.slider-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 0.5rem;
+}
+
+.slider-icon {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1rem;
+}
+
+.slider-value {
+    font-size: 1.2rem;
+    font-weight: lighter;
+    margin-bottom: 1.5rem;
+}
+
+/* slider */
+.custom-slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 1.2rem;
+    background: #fff;
+    border: 0.2575rem solid #000;
+    border-radius: 1.5rem;
+    outline: none;
+    transition: background 0.2s;
+}
+
+/* filled track */
+.custom-slider::-webkit-slider-runnable-track {
+    height: 1.2rem;
+    border-radius: 1.5rem;
+}
+
+/* slider thumb */
+.custom-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 5rem;
+    height: 5rem;
+    background: url('assets/soundslider.svg') no-repeat center;
+    background-size: contain;
+    cursor: grab;
+    margin-top: -1.6rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* music slider */
+#music-slider::-webkit-slider-thumb {
+    background: url('assets/musicslider.svg') no-repeat center;
+    background-size: contain;
 }
 
 /* responsive */
@@ -294,25 +552,31 @@ header {
         text-align: center;
         padding: 2vw;
     }
+
     .logo {
         width: 25vw;
         margin: 2vh 0;
     }
+
     .book-section {
         flex-direction: column;
         gap: 5vh;
     }
+
     .book-container {
         width: 80vw;
     }
+
     .bottom-menu {
         width: 90vw;
         padding: 2vh 4vw;
     }
+
     .menu-item {
         width: 10vw;
         height: 10vw;
     }
+
     .menu-item img {
         width: 8vw;
     }
@@ -323,9 +587,11 @@ header {
         width: 100vw;
         padding: 2vw;
     }
+
     .book-section {
         gap: 5vw;
     }
+
     .progress-container {
         width: 50vw;
     }

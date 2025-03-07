@@ -90,6 +90,7 @@
              <div class="leaderboard-slot"></div>
              <div class="leaderboard-slot"></div>
              <div class="leaderboard-slot"></div>
+             <div class="leaderboard-slot"></div>
         </div>
     </div>
 
@@ -130,6 +131,38 @@
             </div>
          </div>
      </div>
+     </div>
+
+        <!-- Audio Settings Panel -->
+        <div id="audio-overlay" class="popup-overlay">
+            <div class="popup-box audio-box">
+                <!-- arrow back to settings -->
+                <img src="assets/arrow.svg" alt="Arrow" class="arrow-btn" id="back-to-settings">
+
+                <span class="popup-title">Audio Settings</span>
+                
+                <!-- close button -->
+                <img src="assets/exitbutton.svg" alt="Close" class="close-btn" id="close-audio-settings">
+
+                <!-- sound efects slider -->
+                <div class="slider-wrapper">
+                    <span class="slider-label">Sound Effects</span>
+                    <span id="sound-value" class="slider-value">50%</span>
+                    <div class="slider-group">
+                        <input type="range" id="sound-slider" class="custom-slider" min="0" max="100" value="50"> 
+                    </div>
+                </div>
+
+                <!-- music slider -->
+                <div class="slider-wrapper">
+                    <span class="slider-label">Music</span>
+                    <span id="music-value" class="slider-value">50%</span>
+                    <div class="slider-group">
+                        <input type="range" id="music-slider" class="custom-slider" min="0" max="100" value="50">
+                    </div>
+                </div>
+        </div>
+    </div>
 
     <!-- link js -->
      <script src="script.js"></script>
