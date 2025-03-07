@@ -1,6 +1,58 @@
 /* Turnip seed image*/
-turnip-seeds{
-    position: relative;
+.turnip-seeds{
+    height: 60vw;
+    width: 50vw;
+    position: absolute; /**/
+    top: -5vw;
+    left: 0vw;
+    /* bottom: 10px; */
+}
+.question-box{
+    height:60vw;
+    width:35vw;
+    position: absolute;
+    right: 15vw;
+    top: -10vw;
+}
+.option2{
+    height:15vw;
+    width:10vw;
+    position: absolute;
+    right: 40vw;
+    bottom: 2vw;
+}
+.option6{
+    height:15vw;
+    width:10vw;
+    position:absolute;
+    right: 28vw;
+    bottom: 2vw;
+}
+.option4{
+    height:15vw;
+    width:10vw;
+    position: absolute;
+    right: 15vw;
+    bottom: 2vw;
 
+}
+.settings{
+    position:absolute;
+    right: 10vw;
+    bottom: 1vw;
+}
+.exit-button{
+    height: auto;
+    width:5vw;
+    position: absolute;
+    top: 3%;
+    left: 3%;
 
+}
+.progress-bar{
+    height: 100%;
+    width:60%;
+    position: absolute;
+    top:-230px;
+    left:15%;
 }
