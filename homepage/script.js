@@ -1,11 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
+    //get elements
     const leaderboardBtn = document.getElementById("leaderboard-btn");
     const popupOverlay = document.getElementById("popup-overlay");
     const closePopup = document.getElementById("close-popup");
     const settingsOverlay = document.getElementById("settings-overlay");
     const closeSettings = document.getElementById("close-settings");
 
-    //open leaderboard
+    //open leaderboard when clicked
     leaderboardBtn.addEventListener("click", function () {
         popupOverlay.classList.add("active");
     });
@@ -25,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
         settingsOverlay.classList.remove("active");
     });
 
-    //toggle icons
+    //function to toggle (music, sound, vibrate)
     function toggleIcon(imgElement, imgOn, imgOff) {
         imgElement.addEventListener("click", function () {
             let currentSRC = imgElement.src.split("/").pop();
@@ -34,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 : "assets/" + imgOn;
         });
     }
+    //toggle when clicked
     toggleIcon(document.getElementById("music-icon"), "music.svg", "NOmusic.svg");
     toggleIcon(document.getElementById("sound-icon"), "sound.svg", "NOsound.svg");
     toggleIcon(document.getElementById("vibrate-icon"), "vibrate.svg", "NOvibrate.svg");

@@ -1,0 +1,185 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Exit Button */
+.exit-btn {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    width: 500px;
+    height: 500px;
+    cursor: pointer;
+}
+
+/* Progress Bar */
+.progress-container {
+    width: 80%;
+    height: 40px;
+    background-color: #d9d9d9;
+    border-radius: 5px;
+    margin: 60px auto;
+    overflow: hidden;
+    border: 5px solid black; 
+    border-radius: 30px;
+}
+
+
+.progress-bar {
+    height: 100%;
+    background-color: #4caf50;
+}
+
+/* Main Content Layout (Image + Question Box) */
+.content {
+    display: flex;
+    align-items: flex-start; /* Align items at the top */
+    justify-content: center;
+    gap: 30px;
+    margin-top: 150px;
+}
+
+/* Image Styling */
+.image-container img {
+    width: auto;
+    height: 750px;
+    border: none !important;
+    border-radius: 15px;
+}
+
+/* Question Box */
+.question-box {
+    background-color: #d9d9d9;
+    padding: 20px;
+    border-radius: 40px;
+    width: 700px;
+    min-height: 500px;
+    text-align: center;
+    border: 10px solid black; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    box-shadow: none; 
+    max-height: 400px;
+    overflow: hidden;
+}
+
+.question-box p {
+    font-size: 46px; /* Change this size as needed */
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+
+/* Sound Button */
+.sound-btn {
+    width: 500px;
+    height: 500px;
+    cursor: pointer;
+    margin-top: 10px;
+    
+}
+
+.question-answer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; /* Adjust the gap between the question box and answers */
+}
+
+/* Answer Choices */
+.answers {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between the answer buttons */
+}
+
+.answer-btn {
+    font-size: 100px;
+    padding: 5px 80px;
+    border: 10px solid #000;
+    border-radius: 40px;
+    cursor: pointer;
+    background-color: #d9d9d9;
+    color: #000;
+    font-weight: bold;
+    transition: all 0.1s ease;
+
+}
+
+/* Default Hover Effect - Only applies if not selected */
+.answer-btn:hover {
+    box-shadow: 0 0 0 5px #000000; /* Black outline */
+}
+
+/* Remove hover outline after selection */
+.answer-btn.selected-correct,
+.answer-btn.selected-wrong {
+    box-shadow: none !important; /* Removes black outline after clicking */
+}
+
+/* Styles for correct answer */
+.answer-btn.selected-correct {
+    color: green;
+    border-color: green;
+    background-color: white;
+}
+
+/* Styles for wrong answers */
+.answer-btn.selected-wrong {
+    color: red;
+    border-color: red;
+    background-color: white;
+}
+
+/* Continue Button Container */
+.button-container {
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    width: 100%; /* Ensure the container spans the full width */
+    margin-top: 150px; /* Adjust spacing as needed */
+}
+
+/* Continue Button */
+.continue-btn {
+    font-size: 60px;
+    padding: 5px 70px;
+    border-radius: 40px;
+    border: 5px solid #2196f3;
+    background-color: #ffffff;
+    cursor: pointer;
+    color: #2196f3;
+    font-weight: 700; 
+    width: 600px; /* Set a specific width for the button */
+    max-width: 80%; /* Make sure it doesn't stretch too wide on large screens */
+    text-align: center; /* Center the text inside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px; /* Set a fixed height for consistency */
+}
+
+/* Styles for the continue button after the correct answer is clicked */
+.continue-btn.arrow {
+    font-size: 100px; /* Increase the font size for the arrow */
+    background-color: #ffffff; /* Same background color */
+    color: #2196f3; /* Change text to white */
+    border-color: #2196f3; /* Same border color */
+    padding: 0; /* Remove text padding */
+}
+
+/* Arrow inside the continue button */
+.continue-btn.arrow::before {
+    content: "→"; /* Unicode right arrow */
+    font-size: 100px; /* Adjust size to match the button's font size */
+    color: #2196f3; /* Make the arrow blue */
+    line-height: 1; /* Ensure the arrow is vertically centered */
+}
+
+

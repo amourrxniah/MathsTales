@@ -6,6 +6,15 @@ body {
     background-repeat: no-repeat;
     overflow: hidden;
 }
+.exit-btn,
+.sound-btn
+ {
+    width: 20vw;
+    height: auto;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1000;
+}
 .seeds-btn {
     width: 11vw;     /* Width adjusts based on the viewport width */
     height: auto;    /* Maintain aspect ratio */
@@ -14,7 +23,7 @@ body {
     top: 80%;        /* Distance from top of the page */
     left: 25%;       /* Distance from the left of the page */
     z-index: 1000;    /* Ensures it's on top of other content */
-    opacity: 70%;
+    opacity: 100%;
 }
 .fork-btn {
     width: 11vw;     /* Width adjusts based on the viewport width */
@@ -36,6 +45,16 @@ body {
     z-index: 1000;    /* Ensures it's on top of other content */
     opacity: 100%;
 }
+.turnip-btn {
+    width: 20vw;     /* Width adjusts based on the viewport width */
+    height: auto;    /* Maintain aspect ratio */
+    cursor: pointer; /* Makes it clickable */
+    position: absolute;  /* Positioned relative to the page, not fixed */
+    top: 20%;        /* Distance from top of the page */
+    left: 5%;       /* Distance from the left of the page */
+    z-index: 1000;    /* Ensures it's on top of other content */
+    opacity: 100%;
+}
 .barn-btn {
     width: 15vw;     /* Width adjusts based on the viewport width */
     height: auto;    /* Maintain aspect ratio */
@@ -45,4 +64,16 @@ body {
     left: 70%;       /* Distance from the left of the page */
     z-index: 1000;    /* Ensures it's on top of other content */
     opacity: 100%;
+    stroke: 100%;
+}
+.BackArrow-btn {
+    width: 11vw;     /* Width adjusts based on the viewport width */
+    height: auto;    /* Maintain aspect ratio */
+    cursor: pointer; /* Makes it clickable */
+    position: absolute;  /* Positioned relative to the page, not fixed */
+    top: 90%;        /* Distance from top of the page */
+    left: 5%;       /* Distance from the left of the page */
+    z-index: 1000;    /* Ensures it's on top of other content */
+    opacity: 100%;
+    stroke: 100%;
 }
