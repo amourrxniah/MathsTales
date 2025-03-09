@@ -127,5 +127,5 @@ arrowBtn.addEventListener('click', function () {
 
     // Increase the progress bar width
     const progressBar = document.querySelector('.progress-bar');
-    progressBar.style.width = '2%'; // Adjust this value as needed
+    progressBar.style.width = '2%'; 
 });
