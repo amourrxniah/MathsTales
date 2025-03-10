@@ -2,6 +2,8 @@
 <html>
 <head>
   <link rel="stylesheet" href="SM.css">
+  <link rel="stylesheet" href="../story1/styles.css">
+  
 </head>
 <body>
   <a href="../homepage/homepage.html">
@@ -14,5 +16,49 @@
     <img src="assets/barn.svg" alt="Barn" class="barn-btn">
     <a href="../homepage/story cover/storycover.html">
     <img src="../Maps/assets/BackArrow.svg" alt="Next" class="BackArrow-btn"></a>
+
+    <!----settings Stuff-------->
+    <img src="../story1/assets/settings.svg" alt="Settings Button" class="settings-btn" id="settings-btn">
+     <!-- Settings Panel -->
+<div class="settings-container hidden" id="settings-panel">
+  <div class="settings-panel">
+      <div class="settings-header">Settings</div>
+      <div class="audio-title">Audio</div>
+
+      <!-- Sound Effects Slider -->
+<div class="control-group">
+  <div class="control-label">Sound effects</div>
+  <div class="percentage" id="sound-percentage">0%</div>
+  <div class="slider-container">
+      <div class="slider-track" id="sound-track">
+          <div class="slider-fill" id="sound-fill"></div>
+      </div>
+      <!-- Add the sound icon inside the slider-icon -->
+      <div class="slider-icon" id="sound-icon">
+          <img src="../story1/assets/sound.svg" alt="Sound" class="icon">
+      </div>
+  </div>
+</div>
+
+<!-- Music Slider -->
+<div class="control-group">
+  <div class="control-label">Music</div>
+  <div class="percentage" id="music-percentage">0%</div>
+  <div class="slider-container">
+      <div class="slider-track" id="music-track">
+          <div class="slider-fill" id="music-fill"></div>
+      </div>
+      <!-- Add the music icon inside the slider-icon -->
+      <div class="slider-icon" id="music-icon">
+          <img src="../story1/assets/music.svg" alt="Music" class="icon">
+      </div>
+  </div>
+</div>
+  <div class="bubble bubble-1"></div>
+  <div class="bubble bubble-2"></div>
+</div>
+
+  <!-- JavaScript File -->
+  <script src="../story1/jscript.js"></script>
 </body>
 </html>

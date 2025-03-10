@@ -124,4 +124,8 @@ arrowBtn.addEventListener('click', function () {
 
     // Hide the arrow button again (optional)
     arrowBtn.style.display = 'none';
+
+    // Increase the progress bar width
+    const progressBar = document.querySelector('.progress-bar');
+    progressBar.style.width = '2%'; 
 });

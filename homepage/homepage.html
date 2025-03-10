@@ -90,6 +90,7 @@
              <div class="leaderboard-slot"></div>
              <div class="leaderboard-slot"></div>
              <div class="leaderboard-slot"></div>
+             <div class="leaderboard-slot"></div>
         </div>
     </div>
 
@@ -129,6 +130,121 @@
                 <span class="setting-label">Accessibility</span>
             </div>
          </div>
+     </div>
+     </div>
+
+    <!-- Audio Settings Panel -->
+    <div id="audio-overlay" class="popup-overlay">
+        <div class="popup-box audio-box">
+            <!-- arrow back to settings -->
+            <img src="assets/arrow.svg" alt="Arrow" class="arrow-btn" id="back-to-settings">
+
+            <span class="popup-title">Audio Settings</span>
+            
+            <!-- close button -->
+            <img src="assets/exitbutton.svg" alt="Close" class="close-btn" id="close-audio-settings">
+
+            <!-- sound efects slider -->
+            <div class="slider-wrapper">
+                <span class="slider-label">Sound Effects</span>
+                <span id="sound-value" class="slider-value">50%</span>
+                <div class="slider-group">
+                    <input type="range" id="sound-slider" class="custom-slider" min="0" max="100" value="50"> 
+                </div>
+            </div>
+
+            <!-- music slider -->
+            <div class="slider-wrapper">
+                <span class="slider-label">Music</span>
+                <span id="music-value" class="slider-value">50%</span>
+                <div class="slider-group">
+                    <input type="range" id="music-slider" class="custom-slider" min="0" max="100" value="50">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Accessibility Settings Panel -->
+     <div id="accessibility-overlay" class="popup-overlay">
+        <div class="popup-box accessibility-box">
+            <!-- back arrow button -->
+            <img src="assets/arrow.svg" alt="Arrow" class="arrow-btn" id="back-to-settings-accessibility">
+
+            <span class="popup-title">Accessibility</span>
+            
+            <!-- close button -->
+            <img src="assets/exitbutton.svg" alt="Close" class="close-btn" id="close-accessibility-settings">
+
+            <!-- read aloud toggle -->
+            <div class="setting-row">
+                <span class="setting-label1">Read Aloud</span>
+                <div class="setting-control">
+                    <label class="switch">
+                        <input type="checkbox" id="read-aloud-toggle">
+                    </label>
+                </div>
+            </div>
+            
+            <!-- narration speed slider -->
+             <div class="setting-row">
+                <span class="setting-label1">Narration Speed</span>
+                <div class="setting-control">
+                    <div class="slider-group1">
+                        <!-- speed value -->
+                        <span id="narration-speed-value">1x</span>
+                        <div class="slider-wrapper1">
+                        <!-- minus icon -->
+                        <img src="assets/minus.svg" alt="Decrease Speed" class="narration-speed-icon" id="decrease-speed">
+                        <input type="range" id="narration-speed" class="narration-slider" min="0.5" max="2" step="0.5" value="1">
+                        <!-- plus icon -->
+                        <img src="assets/plus.svg" alt="Increase Speed" class="narration-speed-icon" id="increase-speed">
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- highlight words toggle -->
+             <div class="setting-row">
+                <span class="setting-label1">Highlight Words</span>
+                <div class="setting-control">
+                    <label class="switch">
+                        <input type="checkbox" id="highlight-words-toggle">
+                    </label>
+                </div>
+            </div>
+
+            <!-- font size dropdown -->
+             <div class="setting-row">
+                <span class="setting-label1">Font Size</span>
+                <div class="setting-control">
+                <select id="font-size-dropdown" class="custom-dropdown">
+                    <option value="8" style="font-size: 8px;">8</option>
+                    <option value="9" style="font-size: 9px;">9</option>
+                    <option value="10" style="font-size: 10px;">10</option>
+                    <option value="11" style="font-size: 11px;">11</option>
+                    <option value="12" style="font-size: 12px;" selected>12</option>
+                    <option value="13" style="font-size: 13px;">13</option>
+                    <option value="14" style="font-size: 14px;">14</option>
+                    <option value="15" style="font-size: 15px;">15</option>
+                    <option value="16" style="font-size: 16px;">16</option>
+                    <option value="17" style="font-size: 17px;">17</option>
+                    <option value="18" style="font-size: 18px;">18</option>
+                    <option value="19" style="font-size: 19px;">19</option>
+                    <option value="20" style="font-size: 20px;">20</option>
+                </select>
+                </div>
+            </div>
+
+            <!-- colourblind mode toggle -->
+             <div class="setting-row">
+                <span class="setting-label1">Colourblind Mode</span>
+                <div class="setting-control">
+                <label class="switch">
+                    <input type="checkbox" id="colorblind-mode-toggle">
+                </label>
+                </div>
+            </div>
+        </div>
      </div>
 
     <!-- link js -->
