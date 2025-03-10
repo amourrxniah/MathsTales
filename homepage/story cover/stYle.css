@@ -1,21 +1,75 @@
- .side-menu{
+main{
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+.bookcover-container{
+    
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+   
+    
+}
+.bookcover img{
+    
+    height: 60vh;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.open-button{
+    cursor:pointer;
+    padding: 50px;
+    
+    
+}
+.open-button img:hover {
+    transform: scale(1.2); 
+}
+
+.side-menu{
     position:fixed;
-    transform: translateY(-50%);
+    right: 20px;
+    top: 50%;
+    padding: 30px;
+    transform: translateY(-50%); 
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:10px;
-    background: white;
+    gap: 40px;
     border-radius: 10px;
- }
+    width: 70px;
+    height: 400px;
+    border-radius: 5vw; /* round corners */
+    box-shadow: 0 -0.5vh 1vh rgba(0, 0, 0, 0.1); /* adds shadow */
+    border: 0.2vw solid #000 /* adds border */
+}
+
  .menu-item{
     display:flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
+    width: 70px;
+    height: 125px;
     border: none;
     background: none;
+    border-radius: 10px;
     cursor:pointer;
     
  }
+ .menu-item img:hover {
+    transform: scale(1.2); /* enlarge on hover */
+}
+.menu-item img {
+    width: 6vw; /* set icon size */
+    height: auto; /* maintain ratio */
+    
+}
+
+
+ 
  
